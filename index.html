@@ -2320,7 +2320,25 @@ async function checkPendingShare(){
       const file = new File([blob], name, {type: resp.headers.get('Content-Type') || ''});
       askImportType(file);
     }else{
-      toast('Se abrió Marzocca desde "Compartir", pero no se encontró el archivo. Probá de nuevo o subilo manualmente desde Movimientos/Ingresos.', true);
+      const debugResp = await cache.match(SHARE_URL+'__debug');
+      let extra = '';
+      if(debugResp){
+        try{ extra = await debugResp.text(); }catch(e){}
+        await cache.delete(SHARE_URL+'__debug');
+      }
+      if(extra){
+        openModal(`
+          <div class="modal-head"><h2>No se encontró el archivo</h2><button class="modal-close" data-close>&times;</button></div>
+          <div class="modal-body">
+            <p style="margin-top:0;">Se abrió la app desde "Compartir" pero no pude recuperar el archivo. Esto es lo que vio el service worker — sacale una captura y mandámela:</p>
+            <pre style="white-space:pre-wrap;background:var(--surface-2);padding:10px;border-radius:var(--radius);font-size:11px;overflow-x:auto;">${escapeHtml(extra)}</pre>
+          </div>
+          <div class="modal-foot"><button class="btn" data-close>Cerrar</button></div>
+        `, {wide:true});
+        document.getElementById('modal-root').querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click', closeModal));
+      }else{
+        toast('Se abrió Marzocca desde "Compartir", pero no se encontró el archivo. Probá de nuevo o subilo manualmente desde Movimientos/Ingresos.', true);
+      }
     }
   }catch(e){
     console.warn('No se pudo leer el archivo compartido', e);

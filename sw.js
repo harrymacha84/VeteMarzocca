@@ -26,10 +26,22 @@ self.addEventListener('fetch', (event) => {
 });
 
 async function handleShareTarget(request, url) {
+  const debugInfo = {};
   try {
     const formData = await request.formData();
-    const file = formData.get('sharedFile');
-    if (file) {
+    debugInfo.keys = Array.from(formData.keys());
+    let file = formData.get('sharedFile');
+    if (!file || typeof file === 'string') {
+      // Por si Android/WhatsApp no usó exactamente el nombre de campo declarado:
+      // buscamos cualquier entrada que sea un archivo real.
+      for (const [k, v] of formData.entries()) {
+        if (v && typeof v !== 'string') { file = v; debugInfo.foundUnderKey = k; break; }
+      }
+    }
+    if (file && typeof file !== 'string') {
+      debugInfo.fileName = file.name;
+      debugInfo.fileType = file.type;
+      debugInfo.fileSize = file.size;
       const cache = await caches.open(SHARE_CACHE);
       await cache.put(SHARE_URL, new Response(file, {
         headers: {
@@ -37,11 +49,18 @@ async function handleShareTarget(request, url) {
           'X-File-Name': encodeURIComponent(file.name || 'compartido.xlsx')
         }
       }));
+      debugInfo.saved = true;
+    } else {
+      debugInfo.saved = false;
+      debugInfo.error = 'No se encontró ningún archivo en los datos recibidos.';
     }
   } catch (err) {
-    // Si algo falla igual redirigimos: la app va a abrir normalmente.
-    console.error('Error procesando archivo compartido', err);
+    debugInfo.error = String((err && err.message) || err);
   }
+  try {
+    const cache = await caches.open(SHARE_CACHE);
+    await cache.put(SHARE_URL + '__debug', new Response(JSON.stringify(debugInfo, null, 2)));
+  } catch (e) { /* si esto también falla, no hay mucho más que hacer */ }
   const dest = new URL('./index.html?shared=1', url);
   return Response.redirect(dest.href, 303);
 }
