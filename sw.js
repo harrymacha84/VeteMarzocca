@@ -1,15 +1,18 @@
-// Service worker de Marzocca — Gastos.
+// Service worker de Marzocca — Gastos (v2).
 // Su único trabajo real es interceptar el POST que Android genera cuando el usuario
-// comparte un archivo desde otra app (ej. WhatsApp) hacia esta PWA, guardarlo en
-// IndexedDB, y redirigir a la app para que lo procese. No cachea nada más:
-// el resto de la app sigue funcionando 100% online/offline como ya lo hacía.
+// comparte un archivo desde otra app (ej. WhatsApp) hacia esta PWA, guardarlo
+// temporalmente en Cache Storage, y redirigir a la app para que lo procese.
+// No cachea nada más: el resto de la app sigue funcionando online como ya lo hacía.
+//
+// v2: se cambió el mecanismo de IndexedDB a Cache Storage (más simple y estándar
+// para este caso puntual) y se fuerza a reemplazar cualquier versión anterior
+// de este archivo que el teléfono haya guardado.
 
-const DB_NAME = 'vetGastosMarzoccaDB';
-const DB_STORE = 'kv';
-const SHARE_KEY = 'pending-share';
+const SHARE_CACHE = 'marzocca-share-v2';
+const SHARE_URL = './__shared-file__';
 
 self.addEventListener('install', () => {
-  self.skipWaiting();
+  self.skipWaiting(); // reemplaza cualquier SW anterior sin esperar a que se cierren pestañas
 });
 self.addEventListener('activate', (event) => {
   event.waitUntil(self.clients.claim());
@@ -27,40 +30,18 @@ async function handleShareTarget(request, url) {
     const formData = await request.formData();
     const file = formData.get('sharedFile');
     if (file) {
-      const bytes = await file.arrayBuffer();
-      const db = await openDB();
-      await idbPut(db, SHARE_KEY, {
-        name: file.name || 'compartido.xlsx',
-        type: file.type || '',
-        bytes,
-        ts: Date.now()
-      });
+      const cache = await caches.open(SHARE_CACHE);
+      await cache.put(SHARE_URL, new Response(file, {
+        headers: {
+          'Content-Type': file.type || 'application/octet-stream',
+          'X-File-Name': encodeURIComponent(file.name || 'compartido.xlsx')
+        }
+      }));
     }
   } catch (err) {
-    // Si algo falla, igual redirigimos: la app mostrará el aviso correspondiente.
+    // Si algo falla igual redirigimos: la app va a abrir normalmente.
     console.error('Error procesando archivo compartido', err);
   }
   const dest = new URL('./index.html?shared=1', url);
   return Response.redirect(dest.href, 303);
-}
-
-function openDB() {
-  return new Promise((resolve, reject) => {
-    const req = indexedDB.open(DB_NAME, 1);
-    req.onupgradeneeded = () => {
-      if (!req.result.objectStoreNames.contains(DB_STORE)) {
-        req.result.createObjectStore(DB_STORE);
-      }
-    };
-    req.onsuccess = () => resolve(req.result);
-    req.onerror = () => reject(req.error);
-  });
-}
-function idbPut(db, key, value) {
-  return new Promise((resolve, reject) => {
-    const tx = db.transaction(DB_STORE, 'readwrite');
-    tx.objectStore(DB_STORE).put(value, key);
-    tx.oncomplete = () => resolve();
-    tx.onerror = () => reject(tx.error);
-  });
 }

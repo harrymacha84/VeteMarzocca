@@ -2297,22 +2297,30 @@ document.getElementById('btn-wipe').addEventListener('click', ()=>{
    INIT
 ========================================================= */
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('sw.js').catch(err=>console.warn('No se pudo registrar el service worker', err));
+  navigator.serviceWorker.register('sw.js', {scope:'./'}).catch(err=>console.warn('No se pudo registrar el service worker', err));
 }
 
+const SHARE_CACHE = 'marzocca-share-v2';
+const SHARE_URL = './__shared-file__';
+
 // Si venimos de "Compartir" un archivo desde otra app (ej. WhatsApp), el service worker
-// ya lo dejó guardado en IndexedDB. Lo levantamos y preguntamos si es de gastos o de ingresos.
+// ya lo dejó guardado en Cache Storage. Lo levantamos y preguntamos si es de gastos o de ingresos.
 async function checkPendingShare(){
   const params = new URLSearchParams(location.search);
   if(params.get('shared') !== '1') return;
   history.replaceState({}, '', location.pathname);
-  if(!dbHandle) return;
+  if(!('caches' in window)) return;
   try{
-    const pending = await idbGet(dbHandle, 'pending-share');
-    if(pending && pending.bytes){
-      await idbSet(dbHandle, 'pending-share', null);
-      const file = new File([pending.bytes], pending.name || 'compartido.xlsx', {type: pending.type || ''});
+    const cache = await caches.open(SHARE_CACHE);
+    const resp = await cache.match(SHARE_URL);
+    if(resp){
+      await cache.delete(SHARE_URL);
+      const blob = await resp.blob();
+      const name = decodeURIComponent(resp.headers.get('X-File-Name') || 'compartido.xlsx');
+      const file = new File([blob], name, {type: resp.headers.get('Content-Type') || ''});
       askImportType(file);
+    }else{
+      toast('Se abrió Marzocca desde "Compartir", pero no se encontró el archivo. Probá de nuevo o subilo manualmente desde Movimientos/Ingresos.', true);
     }
   }catch(e){
     console.warn('No se pudo leer el archivo compartido', e);
