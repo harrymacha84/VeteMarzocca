@@ -4,7 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Marzocca · Gastos</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐄</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%236D28D9'/%3E%3Crect x='44' y='20' width='12' height='60' rx='4' fill='%23FAF8F4'/%3E%3Crect x='20' y='44' width='60' height='12' rx='4' fill='%23FAF8F4'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Marzocca">
+<meta name="theme-color" content="#6D28D9">
+<link rel="manifest" href="manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -198,28 +203,94 @@ td.num,th.num{text-align:right;}
 .hr{border:none;border-top:1px solid var(--line);margin:20px 0;}
 .muted{color:var(--ink-soft);}
 .small{font-size:12px;}
-.upload-zone{border:1.5px dashed var(--line);border-radius:var(--radius);padding:26px;text-align:center;cursor:pointer;background:var(--surface-2);}
+.upload-zone{border:1.5px dashed var(--line);border-radius:var(--radius);padding:26px;text-align:center;cursor:pointer;background:var(--surface-2);transition:border-color .12s, background .12s;}
 .upload-zone:hover{border-color:var(--green);}
+.upload-zone.dragover{border-color:var(--green);background:var(--green-soft);border-style:solid;}
 .upload-zone input{display:none;}
 .legend-list{display:flex;flex-direction:column;gap:8px;margin-top:14px;}
 .legend-row{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;}
 .legend-row .left{display:flex;align-items:center;gap:8px;}
+.income-item-list{display:flex;flex-direction:column;gap:2px;max-height:360px;overflow-y:auto;padding-right:4px;margin-top:4px;}
+.income-item-list-full{max-height:none;overflow-y:visible;}
+.income-item-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;padding:8px 0;border-bottom:1px solid var(--line-soft);}
+.income-item-desc{flex:1 1 100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-soft);}
+.income-item-amt{flex:0 0 auto;min-width:70px;}
+.income-item-cat{flex:1 1 150px;padding:5px 6px;font-size:12px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);}
+.import-history-item{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:13px 16px;margin-bottom:10px;}
+.import-history-item .ih-meta{font-size:11.5px;color:var(--ink-faint);margin-bottom:3px;}
+.import-history-item .ih-summary{font-size:13.5px;}
 .month-nav{display:flex;align-items:center;gap:10px;}
 .month-nav button{background:none;border:1px solid var(--line);border-radius:var(--radius);width:28px;height:28px;cursor:pointer;color:var(--ink-soft);}
 .month-nav button:hover{background:var(--surface-2);}
 .month-nav .current{font-weight:600;min-width:130px;text-align:center;font-family:var(--font-head);font-size:15px;}
-@media(max-width:820px){
-  .sidebar{width:64px;}
-  .brand .sub, nav button span.label{display:none;}
-  .sidebar-foot{display:none;}
-  main{padding:20px 16px 60px 16px;}
-  .grid-4,.grid-3,.grid-2{grid-template-columns:1fr 1fr;}
+
+.table-card{padding:0;}
+
+/* ---------- mobile topbar / bottom nav / FAB (hidden on desktop) ---------- */
+.mobile-topbar{display:none;}
+.mobile-bottom-nav{display:none;}
+.fab{display:none;}
+
+@media(max-width:760px){
+  .mobile-topbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 16px;height:52px;background:var(--bg-alt);border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:80;
+  }
+  .mobile-topbar-brand{font-family:var(--font-head);font-size:17px;font-weight:600;}
+  .mobile-menu-btn{background:none;border:none;font-size:19px;color:var(--ink-soft);cursor:pointer;padding:6px;line-height:1;}
+
+  .sidebar{display:none;}
+  main{padding:18px 16px 96px 16px;}
+
+  .mobile-bottom-nav{
+    display:flex;flex-direction:row;position:fixed;left:0;right:0;bottom:0;z-index:80;
+    background:var(--surface);border-top:1px solid var(--line);
+    padding-bottom:env(safe-area-inset-bottom, 0);
+  }
+  .mobile-bottom-nav button{
+    flex:1 1 0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+    background:none;border:none;border-left:none;padding:9px 2px 8px 2px;color:var(--ink-faint);font-size:10.5px;cursor:pointer;
+  }
+  .mobile-bottom-nav button .icon{font-size:17px;opacity:.85;}
+  .mobile-bottom-nav button.active{color:var(--green);font-weight:600;}
+  .mobile-bottom-nav button.active .icon{opacity:1;}
+
+  .fab{
+    display:flex;align-items:center;justify-content:center;
+    position:fixed;right:18px;bottom:78px;z-index:85;
+    width:54px;height:54px;border-radius:50%;
+    background:var(--green);color:#fff;font-size:28px;line-height:1;
+    border:none;box-shadow:0 6px 16px rgba(35,40,31,.3);cursor:pointer;
+  }
+  .fab:active{background:#345c46;}
+
+  .page-head{margin-bottom:16px;}
+  .page-head h1{font-size:21px;}
+  .grid-2{grid-template-columns:1fr;}
+  .grid-4,.grid-3{grid-template-columns:repeat(2,1fr);}
+  .filters-bar{flex-direction:column;align-items:stretch;}
+  .filters-bar .field{min-width:0;width:100%;}
+  .filters-bar #btn-clear-filters{margin-top:2px;align-self:flex-start;}
+  .table-card{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .table-card table{min-width:640px;}
+  .modal .field-row{flex-direction:column;gap:0;}
+  /* En mobile, la carga rápida va por el botón flotante */
+  #btn-new-mov{display:none;}
+}
+@media(max-width:420px){
+  .grid-4{grid-template-columns:1fr;}
 }
 </style>
 </head>
 <body>
 
 <div id="boot-loading" style="position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:15px;color:var(--ink-soft);z-index:999;">Cargando…</div>
+
+<header class="mobile-topbar">
+  <div class="mobile-topbar-brand">Marzocca</div>
+  <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Más opciones">☰</button>
+</header>
 
 <div class="app">
   <aside class="sidebar">
@@ -269,7 +340,7 @@ td.num,th.num{text-align:right;}
       </div>
 
       <div class="section-title">Últimos movimientos</div>
-      <div class="card" style="padding:0;">
+      <div class="card table-card">
         <table id="dash-recent-table">
           <thead><tr><th>Fecha</th><th>Categoría</th><th>Beneficiario</th><th class="num">Monto</th></tr></thead>
           <tbody></tbody>
@@ -288,6 +359,15 @@ td.num,th.num{text-align:right;}
           <button class="btn" id="btn-export-mov">Exportar CSV</button>
           <button class="btn btn-primary" id="btn-new-mov">+ Nuevo movimiento</button>
         </div>
+      </div>
+
+      <div class="card" style="margin-bottom:20px;">
+        <h3>Importar gastos desde Excel</h3>
+        <p class="small muted" style="margin-top:-6px;">Pensado para tu planilla histórica: columnas Fecha, Entrega (monto), Descripción, Categoría y Tipo de PAGO — no hace falta que estén en ese orden. Las categorías que coincidan con las tuyas (por nombre, o con las subcategorías de Proveedores) se asignan solas; las que no existan todavía se crean automáticamente para no perder la clasificación original. TRF/EFE se traducen a transferencia/efectivo.</p>
+        <label class="upload-zone" id="mov-upload-zone">
+          <input type="file" id="mov-file" accept=".xlsx,.xls">
+          <div>📥 Hacé clic o arrastrá tu Excel de gastos (.xlsx) acá</div>
+        </label>
       </div>
 
       <div class="filters-bar">
@@ -314,7 +394,7 @@ td.num,th.num{text-align:right;}
         <button class="btn btn-ghost btn-sm" id="btn-clear-filters" style="margin-top:18px;">Limpiar</button>
       </div>
 
-      <div class="card" style="padding:0;">
+      <div class="card table-card">
         <table id="mov-table">
           <thead>
             <tr>
@@ -340,6 +420,7 @@ td.num,th.num{text-align:right;}
           <p>Ingresos mensuales para calcular márgenes y resultados</p>
         </div>
         <div class="page-actions">
+          <button class="btn" id="btn-recalc-inc-cat">Recalcular categorías</button>
           <button class="btn" id="btn-template-xlsx">Descargar plantilla Excel</button>
           <button class="btn btn-primary" id="btn-new-ingreso">+ Cargar mes manualmente</button>
         </div>
@@ -354,7 +435,7 @@ td.num,th.num{text-align:right;}
         </label>
       </div>
 
-      <div class="card" style="padding:0;">
+      <div class="card table-card">
         <table id="ingreso-table">
           <thead><tr><th>Mes</th><th class="num">Ingresos</th><th class="num">Gastos</th><th class="num">Resultado</th><th class="num">Margen</th><th>Observaciones</th><th></th></tr></thead>
           <tbody></tbody>
@@ -363,6 +444,30 @@ td.num,th.num{text-align:right;}
           <div class="big">📄</div>
           <div>Todavía no cargaste ingresos. Importá una planilla o cargá un mes manualmente.</div>
         </div>
+      </div>
+    </section>
+
+    <!-- ================= DETALLE DE INGRESOS (sub-vista) ================= -->
+    <section id="view-ingreso-detalle" class="view">
+      <div class="page-head">
+        <div>
+          <button class="btn btn-ghost btn-sm" id="btn-back-ingresos" style="margin-bottom:8px;">← Volver a Ingresos</button>
+          <h1 id="incdet-title">Detalle</h1>
+          <p id="incdet-subtitle"></p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:16px;">
+        <h3>Por categoría</h3>
+        <div class="legend-list" id="incdet-summary"></div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap;">
+          <h3 style="margin:0;">Todos los ítems<span id="incdet-count" class="muted small"></span></h3>
+          <input type="text" id="incdet-search" placeholder="Buscar producto..." style="max-width:240px;padding:7px 10px;border:1px solid var(--line);border-radius:var(--radius);font-size:13px;">
+        </div>
+        <div class="income-item-list income-item-list-full" id="incdet-items"></div>
       </div>
     </section>
 
@@ -396,11 +501,20 @@ td.num,th.num{text-align:right;}
         </div>
         <div class="card">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-            <h3 style="margin:0;">Distribución por categoría</h3>
+            <h3 style="margin:0;">Distribución de gastos por categoría</h3>
             <div class="month-nav" id="cat-pie-month-nav"></div>
           </div>
           <div class="chart-wrap short"><canvas id="chart-cat-pie"></canvas></div>
         </div>
+      </div>
+
+      <div class="section-title">Ingresos por categoría</div>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+          <div class="small muted" id="inc-cat-hint"></div>
+          <div class="month-nav" id="inc-cat-month-nav"></div>
+        </div>
+        <div class="chart-wrap"><canvas id="chart-inc-cat"></canvas></div>
       </div>
 
       <div class="section-title">Principales proveedores / beneficiarios</div>
@@ -414,13 +528,28 @@ td.num,th.num{text-align:right;}
       <div class="page-head">
         <div>
           <h1>Categorías</h1>
-          <p>Organizá cómo se clasifican los gastos. Proveedores admite subcategorías.</p>
+          <p>Organizá cómo se clasifican gastos e ingresos.</p>
         </div>
         <div class="page-actions">
           <button class="btn btn-primary" id="btn-new-cat">+ Nueva categoría</button>
+          <button class="btn btn-primary" id="btn-new-inc-cat" style="display:none;">+ Nueva categoría de ingreso</button>
         </div>
       </div>
-      <div id="cat-list"></div>
+
+      <div class="pill-group" id="cat-tabs" style="margin-bottom:18px;">
+        <button class="pill active" data-cattab="gastos" type="button">Gastos</button>
+        <button class="pill" data-cattab="ingresos" type="button">Ingresos</button>
+      </div>
+
+      <div id="cat-tab-gastos">
+        <p class="small muted" style="margin-top:-6px;">Proveedores admite subcategorías.</p>
+        <div id="cat-list"></div>
+      </div>
+
+      <div id="cat-tab-ingresos" style="display:none;">
+        <p class="small muted" style="margin-top:-6px;">Cada categoría tiene palabras clave: al importar el listado de ventas, todo ítem cuya descripción contenga alguna de esas palabras se suma ahí. Ej: "excellent" → Alimento, "perfos pipeta" → Pipetas.</p>
+        <div id="inc-cat-list"></div>
+      </div>
     </section>
 
     <!-- ================= CONFIG ================= -->
@@ -446,6 +575,10 @@ td.num,th.num{text-align:right;}
           </label>
         </div>
       </div>
+      <div class="section-title">Historial de importaciones</div>
+      <p class="small muted" style="margin-top:-8px;">Cada vez que importás un Excel (de gastos o de ingresos) queda un registro acá. Si algo se cargó mal, deshacés esa importación puntual sin tocar el resto de los datos.</p>
+      <div id="import-history-list"></div>
+
       <div class="card" style="margin-top:16px;border-color:var(--red);">
         <h3 style="color:var(--red);">Borrar todos los datos</h3>
         <p class="small muted">Elimina movimientos, ingresos y categorías de este navegador. No se puede deshacer.</p>
@@ -455,6 +588,15 @@ td.num,th.num{text-align:right;}
 
   </main>
 </div>
+
+<nav class="mobile-bottom-nav" id="mobile-nav">
+  <button data-view="dashboard" class="active"><span class="icon">◆</span><span class="label">Panel</span></button>
+  <button data-view="movimientos"><span class="icon">≡</span><span class="label">Gastos</span></button>
+  <button data-view="ingresos"><span class="icon">▲</span><span class="label">Ingresos</span></button>
+  <button data-view="estadisticas"><span class="icon">▦</span><span class="label">Estad.</span></button>
+</nav>
+
+<button id="fab-new-mov" class="fab" title="Nuevo gasto" aria-label="Nuevo gasto">+</button>
 
 <div id="modal-root"></div>
 <div id="toast-root"></div>
@@ -471,8 +613,35 @@ const IDB_NAME = 'vetGastosMarzoccaDB';
 const IDB_STORE = 'kv';
 const IDB_KEY = 'main';
 
+function defaultIncomeCategories(){
+  // Punto de partida editable: agregá o quitá palabras clave desde Categorías → Ingresos.
+  // El emparejamiento es por coincidencia de texto (sin importar mayúsculas/acentos) dentro de la descripción del ítem vendido.
+  const starter = [
+    ['Alimento','green', ['excellent']],
+    ['Pipetas','steel', ['perfos pipeta']],
+    ['Medicación','wine', []],
+    ['Accesorios','gold', []],
+    ['Consultas','clay', ['consulta']],
+    ['Vacunación','red', ['vacuna']],
+    ['Peluquería','green', ['baño','corte']],
+    ['Desparasitación','steel', []],
+    ['Cirugía','wine', []],
+    ['Complementarios','gold', []],
+    ['Ropa','clay', []],
+    ['Snacks','red', []],
+    ['Urgencias','green', []],
+    ['Otros','steel', []]
+  ];
+  return starter.map(([name,color,keywords])=>({id:uid('inccat'), name, color, keywords}));
+}
+function ensureShape(data){
+  if(!data.incomeCategories || !data.incomeCategories.length) data.incomeCategories = defaultIncomeCategories();
+  if(!data.importHistory) data.importHistory = [];
+  return data;
+}
+
 function defaultData(){
-  return {
+  return ensureShape({
     categories: [
       {id:'sueldos', name:'Sueldos', color:'green', subcategories:[]},
       {id:'servicios', name:'Servicios', color:'steel', subcategories:[]},
@@ -488,7 +657,7 @@ function defaultData(){
     ],
     movements: [],
     income: []
-  };
+  });
 }
 
 let DATA = defaultData();
@@ -535,19 +704,20 @@ async function loadData(){
     dbHandle = await openIDB();
     const stored = await idbGet(dbHandle, IDB_KEY);
     if(stored && stored.categories && stored.movements && stored.income){
-      return stored;
+      return ensureShape(stored);
     }
     // Nada en IndexedDB todavía: si había datos de una versión anterior (localStorage), migrarlos.
     const legacy = migrateFromLocalStorage();
     if(legacy){
-      await idbSet(dbHandle, IDB_KEY, legacy);
-      return legacy;
+      const shaped = ensureShape(legacy);
+      await idbSet(dbHandle, IDB_KEY, shaped);
+      return shaped;
     }
     return defaultData();
   }catch(e){
     console.warn('IndexedDB no disponible, usando localStorage como respaldo.', e);
     useLocalStorageFallback = true;
-    return migrateFromLocalStorage() || defaultData();
+    return ensureShape(migrateFromLocalStorage() || defaultData());
   }
 }
 
@@ -620,6 +790,30 @@ function downloadBlob(content, filename, type){
   document.body.appendChild(a); a.click(); document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
+// Habilita clic-para-elegir y arrastrar-y-soltar sobre una "upload-zone". onFile(file) recibe el archivo elegido/soltado.
+function setupDropzone(zoneId, inputId, onFile){
+  const zone = document.getElementById(zoneId);
+  const input = document.getElementById(inputId);
+  if(!zone || !input) return;
+  zone.addEventListener('click', (e)=>{ if(e.target.tagName!=='INPUT') input.click(); });
+  input.addEventListener('change', (e)=>{
+    const file = e.target.files[0];
+    e.target.value = '';
+    if(file) onFile(file);
+  });
+  ['dragenter','dragover'].forEach(evt=>zone.addEventListener(evt, (e)=>{
+    e.preventDefault(); e.stopPropagation(); zone.classList.add('dragover');
+  }));
+  ['dragleave','dragend'].forEach(evt=>zone.addEventListener(evt, (e)=>{
+    e.preventDefault(); e.stopPropagation(); zone.classList.remove('dragover');
+  }));
+  zone.addEventListener('drop', (e)=>{
+    e.preventDefault(); e.stopPropagation();
+    zone.classList.remove('dragover');
+    const file = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+    if(file) onFile(file);
+  });
+}
 
 const COLOR_MAP = {
   green:{fg:'var(--green)', bg:'var(--green-soft)', hex:'#3D6B52'},
@@ -636,6 +830,26 @@ function getSubcategory(catId, subId){
   const c = getCategory(catId);
   if(!c) return null;
   return (c.subcategories||[]).find(s=>s.id===subId) || null;
+}
+function getIncomeCategory(id){ return (DATA.incomeCategories||[]).find(c=>c.id===id); }
+function incomeCategoryColor(id){
+  const c = getIncomeCategory(id);
+  return COLOR_MAP[c ? c.color : 'green'] || COLOR_MAP.green;
+}
+// Clasifica una descripción de venta según las palabras clave definidas en cada categoría de ingreso.
+// Si varias categorías coinciden, gana la palabra clave más larga (más específica).
+function matchIncomeCategory(desc){
+  const nd = norm(desc);
+  let best = null, bestLen = 0;
+  (DATA.incomeCategories||[]).forEach(c=>{
+    (c.keywords||[]).forEach(kw=>{
+      const nkw = norm(kw);
+      if(nkw && nd.includes(nkw) && nkw.length>bestLen){
+        best = c.id; bestLen = nkw.length;
+      }
+    });
+  });
+  return best;
 }
 function categoryColor(catId){
   const c = getCategory(catId);
@@ -655,25 +869,103 @@ function toast(msg, isErr){
    NAVIGATION
 ========================================================= */
 let currentView = 'dashboard';
-document.getElementById('nav').addEventListener('click', (e)=>{
-  const btn = e.target.closest('button[data-view]');
-  if(!btn) return;
-  setView(btn.dataset.view);
-});
+function bindNavClicks(container){
+  container.addEventListener('click', (e)=>{
+    const btn = e.target.closest('button[data-view]');
+    if(!btn) return;
+    setView(btn.dataset.view);
+  });
+}
+bindNavClicks(document.getElementById('nav'));
+bindNavClicks(document.getElementById('mobile-nav'));
+
 function setView(view){
   currentView = view;
-  document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('active', b.dataset.view===view));
+  document.querySelectorAll('#nav button[data-view], #mobile-nav button[data-view]').forEach(b=>b.classList.toggle('active', b.dataset.view===view));
   document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
   document.getElementById('view-'+view).classList.add('active');
   renderView(view);
+  window.scrollTo(0,0);
 }
 function renderView(view){
   if(view==='dashboard') renderDashboard();
   else if(view==='movimientos') renderMovimientos();
   else if(view==='ingresos') renderIngresos();
+  else if(view==='ingreso-detalle') renderIngresoDetalle();
   else if(view==='estadisticas') renderEstadisticas();
   else if(view==='categorias') renderCategorias();
+  else if(view==='config') renderImportHistory();
 }
+
+function fmtDateTime(ts){
+  const d = new Date(ts);
+  return d.toLocaleDateString('es-AR') + ' ' + d.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
+}
+function renderImportHistory(){
+  const root = document.getElementById('import-history-list');
+  const history = [...(DATA.importHistory||[])].sort((a,b)=>b.timestamp-a.timestamp);
+  if(!history.length){
+    root.innerHTML = `<div class="empty-state" style="padding:24px 10px;">Todavía no importaste ningún Excel.</div>`;
+    return;
+  }
+  root.innerHTML = history.map(h=>`
+    <div class="import-history-item">
+      <div>
+        <div class="ih-meta">${fmtDateTime(h.timestamp)} · ${h.kind==='gastos'?'Gastos':'Ingresos'}${h.fileHint?' · '+escapeHtml(h.fileHint):''}</div>
+        <div class="ih-summary">${escapeHtml(h.summary)}</div>
+      </div>
+      <button class="btn btn-danger btn-sm" data-undo-import="${h.id}">Deshacer</button>
+    </div>
+  `).join('');
+  root.querySelectorAll('[data-undo-import]').forEach(b=>b.addEventListener('click', ()=>{
+    confirmDialog('Esto revierte exactamente lo que trajo esa importación (los movimientos que agregó, o el estado anterior del mes de ingresos). El resto de tus datos no se toca. ¿Deshacer esta importación?', ()=>{
+      undoImport(b.dataset.undoImport);
+    }, {confirmLabel:'Deshacer importación'});
+  }));
+}
+function undoImport(importId){
+  const idx = (DATA.importHistory||[]).findIndex(h=>h.id===importId);
+  if(idx<0) return;
+  const h = DATA.importHistory[idx];
+  if(h.undo.type==='movements'){
+    const idSet = new Set(h.undo.movementIds);
+    DATA.movements = DATA.movements.filter(m=>!idSet.has(m.id));
+  }else if(h.undo.type==='income'){
+    h.undo.months.forEach(({month, priorSnapshot})=>{
+      const curIdx = DATA.income.findIndex(i=>i.month===month);
+      if(priorSnapshot){
+        if(curIdx>=0) DATA.income[curIdx] = priorSnapshot;
+        else DATA.income.push(priorSnapshot);
+      }else if(curIdx>=0){
+        DATA.income.splice(curIdx,1);
+      }
+    });
+  }
+  DATA.importHistory.splice(idx,1);
+  saveData();
+  renderImportHistory();
+  if(currentView==='movimientos') renderMovimientos();
+  if(currentView==='ingresos') renderIngresos();
+  toast('Importación deshecha.');
+}
+
+/* mobile-only: "☰" abre un menú con las secciones que no entran en la barra inferior */
+document.getElementById('mobile-menu-btn').addEventListener('click', ()=>{
+  openModal(`
+    <div class="modal-head"><h2>Más</h2><button class="modal-close" data-close>&times;</button></div>
+    <div class="modal-body" style="padding:10px 12px;">
+      <button class="btn btn-ghost" data-goto="categorias" style="width:100%;justify-content:flex-start;padding:12px 14px;margin-bottom:4px;">◫ Categorías</button>
+      <button class="btn btn-ghost" data-goto="config" style="width:100%;justify-content:flex-start;padding:12px 14px;">⚙ Configuración</button>
+    </div>
+  `);
+  document.getElementById('modal-root').querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click', closeModal));
+  document.getElementById('modal-root').querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click', ()=>{
+    closeModal(); setView(b.dataset.goto);
+  }));
+});
+
+/* botón flotante mobile: carga rápida de un gasto desde cualquier pantalla */
+document.getElementById('fab-new-mov').addEventListener('click', ()=>openMovForm());
 
 /* =========================================================
    MODAL HELPERS
@@ -852,11 +1144,17 @@ function categoryBadge(catId, subId){
 function monthNavHtml(mk, ns){
   return `<button data-nav="${ns}" data-dir="-1">‹</button><div class="current">${monthLabel(mk)}</div><button data-nav="${ns}" data-dir="1">›</button>`;
 }
+const monthNavGetters = {
+  dash: ()=>dashMonth,
+  quincena: ()=>quincenaMonth,
+  catpie: ()=>catPieMonth,
+  inccat: ()=>incCatMonth
+};
 function bindMonthNav(ns, cb){
   document.querySelectorAll(`[data-nav="${ns}"]`).forEach(btn=>{
     btn.addEventListener('click', ()=>{
       const dir = Number(btn.dataset.dir);
-      const currentMk = ns==='dash'?dashMonth: ns==='quincena'?quincenaMonth: catPieMonth;
+      const currentMk = monthNavGetters[ns] ? monthNavGetters[ns]() : dashMonth;
       cb(addMonths(currentMk, dir));
     });
   });
@@ -995,6 +1293,163 @@ document.getElementById('btn-export-mov').addEventListener('click', ()=>{
   downloadBlob('\uFEFF'+lines.join('\n'), `movimientos_${todayISO()}.csv`, 'text/csv;charset=utf-8;');
 });
 
+/* =========================================================
+   IMPORTAR GASTOS DESDE EXCEL (planilla histórica)
+========================================================= */
+const MES_ABBR_ES = {ene:1,feb:2,mar:3,abr:4,may:5,jun:6,jul:7,ago:8,sep:9,set:9,oct:10,nov:11,dic:12};
+
+// Fecha completa (día) a partir de: objeto Date, número serie de Excel, "dd/mm/aaaa", "aaaa-mm-dd"
+// o texto en español sin año tipo "7-ene" / "7-ene-26" (asume el año actual si no viene especificado).
+function parseFullDateValue(v){
+  if(v instanceof Date && !isNaN(v)){
+    return `${v.getFullYear()}-${String(v.getMonth()+1).padStart(2,'0')}-${String(v.getDate()).padStart(2,'0')}`;
+  }
+  if(typeof v==='number' && v>20000){
+    const d = XLSX.SSF.parse_date_code(v);
+    if(d) return `${d.y}-${String(d.m).padStart(2,'0')}-${String(d.d).padStart(2,'0')}`;
+  }
+  const s = String(v||'').trim().toLowerCase();
+  if(!s) return null;
+  let m = s.match(/^(\d{1,2})[\/\-]([a-záéíóúñ]{3,4})\.?(?:[\/\-](\d{2,4}))?$/i);
+  if(m){
+    const day = Number(m[1]);
+    const month = MES_ABBR_ES[norm(m[2]).slice(0,3)];
+    if(month){
+      let year = m[3] ? Number(m[3]) : new Date().getFullYear();
+      if(year<100) year += 2000;
+      return `${year}-${String(month).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+    }
+  }
+  m = s.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})$/);
+  if(m) return `${m[3]}-${String(m[2]).padStart(2,'0')}-${String(m[1]).padStart(2,'0')}`;
+  m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
+  if(m) return `${m[1]}-${String(m[2]).padStart(2,'0')}-${String(m[3]).padStart(2,'0')}`;
+  return null;
+}
+
+function mapPaymentMethod(raw){
+  const n = norm(raw);
+  if(!n) return 'otro';
+  if(n.includes('trf') || n.includes('transfer')) return 'transferencia';
+  if(n.includes('efe') || n.includes('cash')) return 'efectivo';
+  if(n.includes('tarj') || n.includes('debito') || n.includes('credito')) return 'tarjeta';
+  if(n.includes('cheq')) return 'cheque';
+  return 'otro';
+}
+
+// Mapea el texto de "Categoria" de la planilla a una categoría/subcategoría existente,
+// o crea una categoría nueva con ese mismo nombre si no encuentra nada parecido.
+function mapExpenseCategory(rawCatName){
+  const n = norm(rawCatName);
+  let cat = DATA.categories.find(c=>norm(c.name)===n);
+  if(cat) return {categoryId:cat.id, subcategoryId:null, created:false};
+
+  const proveedores = DATA.categories.find(c=>norm(c.name)==='proveedores');
+  if(proveedores){
+    const sub = (proveedores.subcategories||[]).find(s=>{
+      const ns = norm(s.name);
+      return n.includes(ns) || ns.includes(n);
+    });
+    if(sub) return {categoryId:proveedores.id, subcategoryId:sub.id, created:false};
+  }
+
+  cat = DATA.categories.find(c=>{
+    const nc = norm(c.name);
+    return n.includes(nc) || nc.includes(n);
+  });
+  if(cat) return {categoryId:cat.id, subcategoryId:null, created:false};
+
+  const newCat = {id:uid('cat'), name: rawCatName.trim(), color: COLOR_ORDER[DATA.categories.length % COLOR_ORDER.length], subcategories:[]};
+  DATA.categories.push(newCat);
+  return {categoryId:newCat.id, subcategoryId:null, created:true};
+}
+
+function processMovFile(file){
+  const reader = new FileReader();
+  reader.onload = (ev)=>{
+    try{
+      const wb = XLSX.read(ev.target.result, {type:'array', cellDates:true});
+      const ws = wb.Sheets[wb.SheetNames[0]];
+      const rows = XLSX.utils.sheet_to_json(ws, {header:1, defval:'', raw:true});
+
+      let headerIdx=-1, headerNorms=null;
+      for(let i=0;i<Math.min(rows.length,15);i++){
+        const norms = (rows[i]||[]).map(norm);
+        if(norms.includes('fecha') && norms.some(h=>['entrega','monto','importe','total'].includes(h))){
+          headerIdx=i; headerNorms=norms; break;
+        }
+      }
+      if(headerIdx<0){
+        toast('No se reconoció el formato. Necesita columnas Fecha y Entrega/Monto/Importe.', true);
+        return;
+      }
+      const idxOf = (names)=>{ for(const n of names){ const i=headerNorms.indexOf(n); if(i>=0) return i; } return -1; };
+      const idxFecha = idxOf(['fecha']);
+      const idxMonto = idxOf(['entrega','monto','importe','total']);
+      const idxDesc = idxOf(['descripcion']);
+      const idxCat = idxOf(['categoria']);
+      const idxPago = idxOf(['tipo de pago','forma de pago','metodo de pago','pago']);
+      const otrosCat = DATA.categories.find(c=>norm(c.name)==='otros');
+
+      let count=0, skipped=0, createdCats=0, assumedYear=false;
+      const newIds = [];
+      for(let r=headerIdx+1;r<rows.length;r++){
+        const row = rows[r]||[];
+        if(row.every(c=>c===''||c===null||c===undefined)) continue;
+        const rawFecha = row[idxFecha];
+        const dateISO = parseFullDateValue(rawFecha);
+        const amount = Number(row[idxMonto]);
+        if(!dateISO || isNaN(amount) || !amount){ skipped++; continue; }
+        if(typeof rawFecha!=='object' && typeof rawFecha!=='number') assumedYear = true;
+
+        let categoryId = otrosCat ? otrosCat.id : DATA.categories[0].id;
+        let subcategoryId = null;
+        const rawCat = idxCat>=0 ? String(row[idxCat]||'').trim() : '';
+        if(rawCat){
+          const before = DATA.categories.length;
+          const mapped = mapExpenseCategory(rawCat);
+          categoryId = mapped.categoryId; subcategoryId = mapped.subcategoryId;
+          if(DATA.categories.length>before) createdCats++;
+        }
+
+        const newId = uid('mov');
+        DATA.movements.push({
+          id: newId, date: dateISO, amount, categoryId, subcategoryId,
+          payee: idxDesc>=0 ? String(row[idxDesc]||'').trim() : '',
+          method: idxPago>=0 ? mapPaymentMethod(row[idxPago]) : 'otro',
+          note: '', createdAt: Date.now()
+        });
+        newIds.push(newId);
+        count++;
+      }
+
+      if(count>0){
+        DATA.importHistory = DATA.importHistory || [];
+        DATA.importHistory.push({
+          id: uid('imp'), timestamp: Date.now(), kind: 'gastos',
+          fileHint: file.name || '',
+          summary: `${count} movimiento(s) importado(s)` + (createdCats?`, ${createdCats} categoría(s) nueva(s)`:''),
+          undo: { type:'movements', movementIds: newIds }
+        });
+        saveData();
+        renderMovimientos();
+        let msg = `Se importaron ${count} movimiento(s).`;
+        if(createdCats) msg += ` Se crearon ${createdCats} categoría(s) nueva(s) para las que no coincidían con las tuyas — revisalas en Categorías.`;
+        if(skipped) msg += ` (${skipped} fila(s) omitida(s) por falta de fecha o monto)`;
+        if(assumedYear) msg += ` La fecha no traía año explícito: se asumió ${new Date().getFullYear()}, revisá que sea correcto.`;
+        toast(msg);
+      }else{
+        toast('No se encontraron filas válidas para importar.', true);
+      }
+    }catch(err){
+      console.error(err);
+      toast('No se pudo leer el archivo. Verificá que sea un Excel válido.', true);
+    }
+  };
+  reader.readAsArrayBuffer(file);
+}
+setupDropzone('mov-upload-zone', 'mov-file', processMovFile);
+
 function openMovForm(id){
   const existing = id ? DATA.movements.find(m=>m.id===id) : null;
   openModal(`
@@ -1076,12 +1531,14 @@ function renderIngresos(){
         <td class="small muted">${escapeHtml(inc.note)||''}${(inc.costoVentas!=null || inc.gananciaVentas!=null) ? `<br><span style="color:var(--ink-faint);">${inc.costoVentas!=null?'Costo merc.: '+fmtMoney(inc.costoVentas):''}${(inc.costoVentas!=null && inc.gananciaVentas!=null)?' · ':''}${inc.gananciaVentas!=null?'Ganancia bruta: '+fmtMoney(inc.gananciaVentas):''}</span>` : ''}</td>
         <td>
           <div class="row-actions">
+            ${inc.byCategory ? `<button class="icon-btn" data-view-breakdown="${inc.id}" title="Ver por categoría">▤</button>` : ''}
             <button class="icon-btn" data-edit-inc="${inc.id}" title="Editar">✎</button>
             <button class="icon-btn" data-del-inc="${inc.id}" title="Eliminar">🗑</button>
           </div>
         </td>
       </tr>`;
     }).join('');
+    tbody.querySelectorAll('[data-view-breakdown]').forEach(b=>b.addEventListener('click', ()=>openIncomeBreakdown(b.dataset.viewBreakdown)));
     tbody.querySelectorAll('[data-edit-inc]').forEach(b=>b.addEventListener('click', ()=>openIncomeForm(b.dataset.editInc)));
     tbody.querySelectorAll('[data-del-inc]').forEach(b=>b.addEventListener('click', ()=>{
       confirmDialog('¿Eliminar este ingreso mensual?', ()=>{
@@ -1091,7 +1548,124 @@ function renderIngresos(){
     }));
   }
 }
+document.getElementById('btn-recalc-inc-cat').addEventListener('click', ()=>recalcIncomeCategories(false));
 document.getElementById('btn-new-ingreso').addEventListener('click', ()=>openIncomeForm());
+
+function incomeCategoryOptionsHtml(selectedId){
+  return `<option value="">Sin categorizar</option>` + (DATA.incomeCategories||[]).map(c=>`<option value="${c.id}" ${c.id===selectedId?'selected':''}>${escapeHtml(c.name)}</option>`).join('');
+}
+function reassignIncomeLineDesc(incId, desc, newCatId){
+  const inc = DATA.income.find(i=>i.id===incId);
+  if(!inc || !inc.lineItems) return;
+  inc.lineItems.forEach(li=>{
+    if(li.desc===desc){ li.categoryId = newCatId || null; li.manualOverride = true; }
+  });
+  const byCat = {};
+  inc.lineItems.forEach(li=>{ const key = li.categoryId || '_uncat'; byCat[key] = (byCat[key]||0)+li.amount; });
+  inc.byCategory = byCat;
+  saveData();
+}
+let currentIncomeDetailId = null;
+let incdetSearchTerm = '';
+
+function openIncomeBreakdown(id){
+  currentIncomeDetailId = id;
+  incdetSearchTerm = '';
+  setView('ingreso-detalle');
+}
+document.getElementById('btn-back-ingresos').addEventListener('click', ()=>setView('ingresos'));
+
+function renderIngresoDetalle(){
+  const inc = DATA.income.find(i=>i.id===currentIncomeDetailId);
+  if(!inc){
+    document.getElementById('incdet-title').textContent = 'Sin datos';
+    document.getElementById('incdet-subtitle').textContent = '';
+    document.getElementById('incdet-summary').innerHTML = '';
+    document.getElementById('incdet-items').innerHTML = '<div class="empty-state">Elegí un mes desde Ingresos.</div>';
+    document.getElementById('incdet-count').textContent = '';
+    return;
+  }
+  document.getElementById('incdet-title').textContent = monthLabel(inc.month);
+  document.getElementById('incdet-subtitle').textContent = `${fmtMoney(inc.amount)} en total`;
+
+  const total = inc.amount || (inc.byCategory ? sum(Object.values(inc.byCategory)) : 0);
+  const summaryEl = document.getElementById('incdet-summary');
+  if(!inc.byCategory){
+    summaryEl.innerHTML = `<div class="small muted">Este mes se cargó sin detalle por producto (carga manual o plantilla simple).</div>`;
+  }else{
+    summaryEl.innerHTML = Object.entries(inc.byCategory).sort((a,b)=>b[1]-a[1]).map(([key,amt])=>{
+      const isUncat = key==='_uncat';
+      const cat = isUncat?null:getIncomeCategory(key);
+      const col = isUncat ? {fg:'var(--ink-faint)'} : incomeCategoryColor(key);
+      const pct = total? (amt/total*100):0;
+      return `<div class="legend-row"><div class="left"><span class="dot" style="background:${col.fg};"></span>${isUncat?'Sin categorizar':escapeHtml(cat?cat.name:'—')}</div><div class="tabular">${fmtMoney(amt)} <span class="muted">(${pct.toFixed(0)}%)</span></div></div>`;
+    }).join('');
+  }
+
+  const itemsEl = document.getElementById('incdet-items');
+  const countEl = document.getElementById('incdet-count');
+  if(!inc.lineItems || !inc.lineItems.length){
+    itemsEl.innerHTML = `<div class="empty-state">Este mes no tiene ítems detallados para revisar (se cargó sin el listado de ventas producto por producto).</div>`;
+    countEl.textContent = '';
+    return;
+  }
+
+  const byDesc = {};
+  inc.lineItems.forEach(li=>{
+    if(!byDesc[li.desc]) byDesc[li.desc] = {amount:0, categoryId: li.categoryId||null};
+    byDesc[li.desc].amount += li.amount;
+  });
+  const term = norm(incdetSearchTerm);
+  const entries = Object.entries(byDesc)
+    .filter(([desc])=> !term || norm(desc).includes(term))
+    .sort((a,b)=>b[1].amount-a[1].amount);
+
+  countEl.textContent = ` (${entries.length}${term?` de ${Object.keys(byDesc).length}`:''})`;
+  if(!entries.length){
+    itemsEl.innerHTML = `<div class="empty-state">Ningún producto coincide con "${escapeHtml(incdetSearchTerm)}".</div>`;
+    return;
+  }
+  itemsEl.innerHTML = entries.map(([desc,d])=>{
+    const encDesc = encodeURIComponent(desc);
+    return `
+    <div class="income-item-row">
+      <div class="income-item-desc" title="${escapeHtml(desc)}">${escapeHtml(desc)}</div>
+      <div class="tabular small income-item-amt">${fmtMoney(d.amount)}</div>
+      <select class="income-item-cat" data-inc-item-cat="${encDesc}">${incomeCategoryOptionsHtml(d.categoryId)}</select>
+      <button class="icon-btn" data-inc-item-kw="${encDesc}" title="Agregar esta descripción como palabra clave de la categoría elegida">＋ clave</button>
+    </div>`;
+  }).join('');
+
+  itemsEl.querySelectorAll('[data-inc-item-cat]').forEach(sel=>{
+    sel.addEventListener('change', ()=>{
+      const desc = decodeURIComponent(sel.dataset.incItemCat);
+      reassignIncomeLineDesc(inc.id, desc, sel.value || null);
+      renderIngresos();
+      renderIngresoDetalle();
+    });
+  });
+  itemsEl.querySelectorAll('[data-inc-item-kw]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const desc = decodeURIComponent(btn.dataset.incItemKw);
+      const sel = itemsEl.querySelector(`[data-inc-item-cat="${btn.dataset.incItemKw}"]`);
+      const catId = sel ? sel.value : '';
+      if(!catId){ toast('Elegí una categoría en el desplegable de ese ítem antes de agregar la palabra clave.', true); return; }
+      const cat = getIncomeCategory(catId);
+      if(!cat) return;
+      cat.keywords = cat.keywords || [];
+      cat.keywords.push(desc);
+      saveData();
+      recalcIncomeCategories(true);
+      toast(`"${desc}" agregada como palabra clave de ${cat.name}.`);
+      renderIngresoDetalle();
+    });
+  });
+}
+document.getElementById('incdet-search').addEventListener('input', (e)=>{
+  incdetSearchTerm = e.target.value;
+  renderIngresoDetalle();
+});
+
 function openIncomeForm(id){
   const existing = id ? DATA.income.find(i=>i.id===id) : null;
   openModal(`
@@ -1136,10 +1710,7 @@ document.getElementById('btn-template-xlsx').addEventListener('click', ()=>{
   XLSX.writeFile(wb, 'plantilla_ingresos_marzocca.xlsx');
 });
 
-document.getElementById('ingreso-upload-zone').addEventListener('click', (e)=>{ if(e.target.tagName!=='INPUT') document.getElementById('ingreso-file').click(); });
-document.getElementById('ingreso-file').addEventListener('change', (e)=>{
-  const file = e.target.files[0];
-  if(!file) return;
+function processIngresoFile(file){
   const reader = new FileReader();
   reader.onload = (ev)=>{
     try{
@@ -1149,11 +1720,27 @@ document.getElementById('ingreso-file').addEventListener('change', (e)=>{
 
       const detailed = tryImportListadoDeEntradas(rows);
       if(detailed.months > 0){
+        DATA.importHistory = DATA.importHistory || [];
+        DATA.importHistory.push({
+          id: uid('imp'), timestamp: Date.now(), kind: 'ingresos',
+          fileHint: file.name || '',
+          summary: `Listado de entradas — ${detailed.months} mes(es), ${detailed.rows} filas`,
+          undo: { type:'income', months: detailed.monthsUndo }
+        });
+        saveData();
         renderIngresos();
         toast(`Se importaron ${detailed.months} mes(es) desde el listado de entradas (${detailed.rows} filas de venta).`);
       }else{
         const simple = tryImportSimpleTemplate(rows);
         if(simple.count > 0){
+          DATA.importHistory = DATA.importHistory || [];
+          DATA.importHistory.push({
+            id: uid('imp'), timestamp: Date.now(), kind: 'ingresos',
+            fileHint: file.name || '',
+            summary: `Plantilla simple — ${simple.count} mes(es)`,
+            undo: { type:'income', months: simple.monthsUndo }
+          });
+          saveData();
           renderIngresos();
           toast(`Se importaron ${simple.count} mes(es) de ingresos.` + (simple.skipped?` (${simple.skipped} fila(s) omitida(s))`:''));
         }else{
@@ -1164,10 +1751,10 @@ document.getElementById('ingreso-file').addEventListener('change', (e)=>{
       console.error(err);
       toast('No se pudo leer el archivo. Verificá que sea un Excel válido.', true);
     }
-    e.target.value = '';
   };
   reader.readAsArrayBuffer(file);
-});
+}
+setupDropzone('ingreso-upload-zone', 'ingreso-file', processIngresoFile);
 
 // Formato real exportado por el software de la clínica: "LISTADO DE ENTRADAS",
 // con encabezados en alguna de las primeras filas (FECHA, DESCRIPCION, IMPORTE/TOTAL, COSTO, GANANCIA, ...)
@@ -1184,6 +1771,7 @@ function tryImportListadoDeEntradas(rows){
 
   const idxOf = (names)=>{ for(const n of names){ const i = headerNorms.indexOf(n); if(i>=0) return i; } return -1; };
   const idxFecha = idxOf(['fecha']);
+  const idxDesc = idxOf(['descripcion']);
   const idxTotal = idxOf(['total']);
   const idxImporte = idxOf(['importe']);
   const idxCosto = idxOf(['costo']);
@@ -1199,23 +1787,58 @@ function tryImportListadoDeEntradas(rows){
     if(!mk) continue; // sin fecha => fila en blanco o fila de TOTAL: se ignora
     const val = Number(row[valueIdx]);
     if(isNaN(val)) continue;
-    if(!byMonth[mk]) byMonth[mk] = {total:0, costo:0, ganancia:0, count:0};
+    if(!byMonth[mk]) byMonth[mk] = {total:0, costo:0, ganancia:0, count:0, byCat:{}, lineItems:[]};
+    const desc = idxDesc>=0 ? String(row[idxDesc]||'').trim() : '';
+    const catId = desc ? matchIncomeCategory(desc) : null;
     byMonth[mk].total += val;
     if(idxCosto>=0) byMonth[mk].costo += Number(row[idxCosto])||0;
     if(idxGanancia>=0) byMonth[mk].ganancia += Number(row[idxGanancia])||0;
     byMonth[mk].count++;
+    const catKey = catId || '_uncat';
+    byMonth[mk].byCat[catKey] = (byMonth[mk].byCat[catKey]||0) + val;
+    if(desc) byMonth[mk].lineItems.push({desc, amount:val, categoryId:catId});
     rowCount++;
   }
   const monthKeys = Object.keys(byMonth);
   if(!monthKeys.length) return {months:0, rows:0};
+  const monthsUndo = [];
   monthKeys.forEach(mk=>{
     const d = byMonth[mk];
+    const prior = DATA.income.find(i=>i.month===mk);
+    monthsUndo.push({month:mk, priorSnapshot: prior ? JSON.parse(JSON.stringify(prior)) : null});
     upsertIncome(mk, d.total, `Importado: listado de entradas (${d.count} filas)`, null, {
       costoVentas: idxCosto>=0 ? d.costo : null,
-      gananciaVentas: idxGanancia>=0 ? d.ganancia : null
+      gananciaVentas: idxGanancia>=0 ? d.ganancia : null,
+      byCategory: idxDesc>=0 ? d.byCat : null,
+      lineItems: idxDesc>=0 ? d.lineItems : null
     });
   });
-  return {months: monthKeys.length, rows: rowCount};
+  return {months: monthKeys.length, rows: rowCount, monthsUndo};
+}
+
+// Vuelve a aplicar las palabras clave actuales a los ítems ya importados (útil después de editar categorías de ingreso).
+// Los ítems reclasificados a mano (manualOverride) se respetan y no se pisan.
+function recalcIncomeCategories(silent){
+  let touched = 0;
+  DATA.income.forEach(inc=>{
+    if(!inc.lineItems || !inc.lineItems.length) return;
+    const byCat = {};
+    inc.lineItems.forEach(li=>{
+      if(!li.manualOverride){
+        li.categoryId = matchIncomeCategory(li.desc);
+      }
+      const key = li.categoryId || '_uncat';
+      byCat[key] = (byCat[key]||0) + li.amount;
+    });
+    inc.byCategory = byCat;
+    touched++;
+  });
+  if(touched){
+    saveData(); renderIngresos();
+    if(!silent) toast(`Categorías recalculadas en ${touched} mes(es) importados.`);
+  }else{
+    if(!silent) toast('No hay meses importados con detalle de ítems para recalcular.', true);
+  }
 }
 
 // Formato simple (plantilla descargable): columnas Mes / Ingresos / Observaciones, encabezado en la fila 1.
@@ -1227,16 +1850,19 @@ function tryImportSimpleTemplate(rows){
   const idxObs = headerNorms.findIndex(h=>h.includes('observ') || h.includes('nota'));
   if(idxMes<0 || idxIng<0) return {count:0, skipped:0};
   let count = 0, skipped = 0;
+  const monthsUndo = [];
   for(let r=1;r<rows.length;r++){
     const row = rows[r]||[];
     if(row.every(c=>c==='' || c===null || c===undefined)) continue;
     const mk = parseMonthValue(row[idxMes]);
     const amt = Number(row[idxIng]);
     if(!mk || isNaN(amt)){ skipped++; continue; }
+    const prior = DATA.income.find(i=>i.month===mk);
+    monthsUndo.push({month:mk, priorSnapshot: prior ? JSON.parse(JSON.stringify(prior)) : null});
     upsertIncome(mk, amt, idxObs>=0 ? String(row[idxObs]||'') : '', null);
     count++;
   }
-  return {count, skipped};
+  return {count, skipped, monthsUndo};
 }
 function parseMonthValue(v){
   if(v instanceof Date){ return `${v.getFullYear()}-${String(v.getMonth()+1).padStart(2,'0')}`; }
@@ -1260,6 +1886,7 @@ function parseMonthValue(v){
 ========================================================= */
 let quincenaMonth = monthKey(todayISO());
 let catPieMonth = monthKey(todayISO());
+let incCatMonth = monthKey(todayISO());
 
 function renderEstadisticas(){
   renderMonthlyStackChart();
@@ -1273,7 +1900,33 @@ function renderEstadisticas(){
   bindMonthNav('catpie', (mk)=>{ catPieMonth=mk; renderEstadisticas(); });
   renderCatPieChart();
 
+  document.getElementById('inc-cat-month-nav').innerHTML = monthNavHtml(incCatMonth,'inccat');
+  bindMonthNav('inccat', (mk)=>{ incCatMonth=mk; renderEstadisticas(); });
+  renderIncCatChart();
+
   renderTopPayeesChart();
+}
+
+function renderIncCatChart(){
+  destroyChart('inc-cat');
+  const ctx = document.getElementById('chart-inc-cat').getContext('2d');
+  const hintEl = document.getElementById('inc-cat-hint');
+  const inc = DATA.income.find(i=>i.month===incCatMonth);
+  if(!inc || !inc.byCategory){
+    hintEl.textContent = inc ? 'Este mes se cargó sin detalle por categoría (carga manual o plantilla simple).' : 'No hay ingresos cargados para este mes.';
+    chartInstances['inc-cat'] = emptyDoughnut(ctx);
+    return;
+  }
+  hintEl.textContent = `${monthLabel(incCatMonth)} · ${fmtMoney(inc.amount)} en total`;
+  const entries = Object.entries(inc.byCategory).filter(([,v])=>v>0);
+  chartInstances['inc-cat'] = new Chart(ctx,{
+    type:'doughnut',
+    data:{
+      labels: entries.map(([key])=> key==='_uncat' ? 'Sin categorizar' : (getIncomeCategory(key)?getIncomeCategory(key).name:'—')),
+      datasets:[{ data: entries.map(([,v])=>v), backgroundColor: entries.map(([key])=> key==='_uncat' ? '#B7AFA0' : incomeCategoryColor(key).hex), borderWidth:2, borderColor:'#FBFAF6' }]
+    },
+    options:{responsive:true,maintainAspectRatio:false, plugins:{legend:{position:'bottom'}}, cutout:'62%'}
+  });
 }
 
 function renderMonthlyStackChart(){
@@ -1386,6 +2039,22 @@ function renderTopPayeesChart(){
    CATEGORIAS VIEW
 ========================================================= */
 function renderCategorias(){
+  renderExpenseCategorias();
+  renderIncomeCategorias();
+}
+document.getElementById('cat-tabs').addEventListener('click', (e)=>{
+  const p = e.target.closest('button[data-cattab]');
+  if(!p) return;
+  document.querySelectorAll('#cat-tabs .pill').forEach(x=>x.classList.remove('active'));
+  p.classList.add('active');
+  const tab = p.dataset.cattab;
+  document.getElementById('cat-tab-gastos').style.display = tab==='gastos' ? '' : 'none';
+  document.getElementById('cat-tab-ingresos').style.display = tab==='ingresos' ? '' : 'none';
+  document.getElementById('btn-new-cat').style.display = tab==='gastos' ? '' : 'none';
+  document.getElementById('btn-new-inc-cat').style.display = tab==='ingresos' ? '' : 'none';
+});
+
+function renderExpenseCategorias(){
   const root = document.getElementById('cat-list');
   root.innerHTML = DATA.categories.map(c=>{
     const col = COLOR_MAP[c.color];
@@ -1424,6 +2093,106 @@ function renderCategorias(){
     });
   });
 }
+
+function renderIncomeCategorias(){
+  const root = document.getElementById('inc-cat-list');
+  root.innerHTML = (DATA.incomeCategories||[]).map(c=>{
+    const col = COLOR_MAP[c.color] || COLOR_MAP.green;
+    return `
+    <div class="cat-card" data-inccat="${c.id}">
+      <div class="cat-card-head">
+        <div class="name"><span class="dot" style="background:${col.fg};width:11px;height:11px;"></span>${escapeHtml(c.name)}</div>
+        <div class="row-actions">
+          <button class="icon-btn" data-rename-inccat="${c.id}" title="Renombrar">✎</button>
+          <button class="icon-btn" data-del-inccat="${c.id}" title="Eliminar categoría">🗑</button>
+        </div>
+      </div>
+      <div class="subcats">
+        ${(c.keywords||[]).map((kw,idx)=>`
+          <span class="subcat-chip">${escapeHtml(kw)}<button data-del-kw="${c.id}|${idx}" title="Quitar palabra clave">&times;</button></span>
+        `).join('') || '<span class="small muted">Sin palabras clave todavía</span>'}
+        <span class="add-subcat-inline">
+          <input type="text" placeholder="+ palabra clave" data-add-kw-input="${c.id}">
+        </span>
+      </div>
+    </div>`;
+  }).join('');
+
+  root.querySelectorAll('[data-rename-inccat]').forEach(b=>b.addEventListener('click', ()=>renameIncomeCategory(b.dataset.renameInccat)));
+  root.querySelectorAll('[data-del-inccat]').forEach(b=>b.addEventListener('click', ()=>deleteIncomeCategory(b.dataset.delInccat)));
+  root.querySelectorAll('[data-del-kw]').forEach(b=>b.addEventListener('click', ()=>{
+    const [catId, idx] = b.dataset.delKw.split('|');
+    deleteIncomeKeyword(catId, idx);
+  }));
+  root.querySelectorAll('[data-add-kw-input]').forEach(inp=>{
+    inp.addEventListener('keydown', (e)=>{
+      if(e.key==='Enter' && inp.value.trim()){
+        addIncomeKeyword(inp.dataset.addKwInput, inp.value.trim());
+        inp.value='';
+      }
+    });
+  });
+}
+function addIncomeKeyword(catId, kw){
+  const c = getIncomeCategory(catId); if(!c) return;
+  c.keywords = c.keywords || [];
+  c.keywords.push(kw);
+  saveData(); renderIncomeCategorias();
+  toast('Palabra clave agregada. Usá "Recalcular categorías" en Ingresos para aplicarla a meses ya importados.');
+}
+function deleteIncomeKeyword(catId, idx){
+  const c = getIncomeCategory(catId); if(!c) return;
+  c.keywords.splice(Number(idx),1);
+  saveData(); renderIncomeCategorias();
+}
+function renameIncomeCategory(id){
+  const c = getIncomeCategory(id); if(!c) return;
+  openModal(`
+    <div class="modal-head"><h2>Renombrar categoría</h2><button class="modal-close" data-close>&times;</button></div>
+    <div class="modal-body"><div class="field"><label>Nombre</label><input type="text" id="ric-name" value="${escapeHtml(c.name)}"></div></div>
+    <div class="modal-foot"><button class="btn" data-close>Cancelar</button><button class="btn btn-primary" id="ric-save">Guardar</button></div>
+  `);
+  document.getElementById('modal-root').querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click', closeModal));
+  document.getElementById('ric-save').addEventListener('click', ()=>{
+    const name = document.getElementById('ric-name').value.trim();
+    if(!name){ toast('Ingresá un nombre.', true); return; }
+    c.name = name; saveData(); closeModal(); renderIncomeCategorias(); toast('Categoría actualizada.');
+  });
+}
+function deleteIncomeCategory(id){
+  confirmDialog('¿Eliminar esta categoría de ingresos? Los ítems que clasificaba pasarán a "Sin categorizar" la próxima vez que recalculés.', ()=>{
+    DATA.incomeCategories = DATA.incomeCategories.filter(c=>c.id!==id);
+    saveData(); renderIncomeCategorias(); toast('Categoría eliminada.');
+  });
+}
+document.getElementById('btn-new-inc-cat').addEventListener('click', ()=>{
+  openModal(`
+    <div class="modal-head"><h2>Nueva categoría de ingreso</h2><button class="modal-close" data-close>&times;</button></div>
+    <div class="modal-body">
+      <div class="field"><label>Nombre</label><input type="text" id="nic-name" placeholder="Ej: Estética"></div>
+      <div class="field"><label>Color</label>
+        <div class="pill-group" id="nic-color-group">
+          ${COLOR_ORDER.map((c,i)=>`<button type="button" class="pill ${i===0?'active':''}" data-color="${c}" style="border-color:${COLOR_MAP[c].hex};${i===0?`background:${COLOR_MAP[c].hex};color:#fff;`:''}">${c}</button>`).join('')}
+        </div>
+      </div>
+    </div>
+    <div class="modal-foot"><button class="btn" data-close>Cancelar</button><button class="btn btn-primary" id="nic-save">Crear</button></div>
+  `);
+  let chosen = COLOR_ORDER[0];
+  document.querySelectorAll('#nic-color-group .pill').forEach(p=>p.addEventListener('click', ()=>{
+    document.querySelectorAll('#nic-color-group .pill').forEach(x=>{x.classList.remove('active');x.style.background='';x.style.color='';});
+    p.classList.add('active'); p.style.background=COLOR_MAP[p.dataset.color].hex; p.style.color='#fff';
+    chosen = p.dataset.color;
+  }));
+  document.getElementById('modal-root').querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click', closeModal));
+  document.getElementById('nic-save').addEventListener('click', ()=>{
+    const name = document.getElementById('nic-name').value.trim();
+    if(!name){ toast('Ingresá un nombre.', true); return; }
+    DATA.incomeCategories.push({id:uid('inccat'), name, color:chosen, keywords:[]});
+    saveData(); closeModal(); renderIncomeCategorias(); toast('Categoría creada.');
+  });
+});
+
 document.getElementById('btn-new-cat').addEventListener('click', ()=>{
   openModal(`
     <div class="modal-head"><h2>Nueva categoría</h2><button class="modal-close" data-close>&times;</button></div>
@@ -1502,24 +2271,22 @@ document.getElementById('btn-export-backup').addEventListener('click', ()=>{
   downloadBlob(JSON.stringify(DATA,null,2), `backup_gastos_marzocca_${todayISO()}.json`, 'application/json');
   toast('Copia de seguridad descargada.');
 });
-document.getElementById('backup-upload-zone').addEventListener('click', (e)=>{ if(e.target.tagName!=='INPUT') document.getElementById('backup-file').click(); });
-document.getElementById('backup-file').addEventListener('change', (e)=>{
-  const file = e.target.files[0]; if(!file) return;
+function processBackupFile(file){
   const reader = new FileReader();
   reader.onload = (ev)=>{
     try{
       const parsed = JSON.parse(ev.target.result);
       if(!parsed.categories || !parsed.movements || !parsed.income) throw new Error('formato inválido');
       confirmDialog('Esto va a reemplazar todos los datos actuales de esta computadora por los del archivo importado. ¿Continuar?', ()=>{
-        DATA = parsed; saveData(); renderView(currentView); toast('Copia de seguridad restaurada.');
+        DATA = ensureShape(parsed); saveData(); renderView(currentView); toast('Copia de seguridad restaurada.');
       }, {confirmLabel:'Restaurar', title:'Restaurar copia'});
     }catch(err){
       toast('El archivo no tiene un formato válido de copia de seguridad.', true);
     }
-    e.target.value = '';
   };
   reader.readAsText(file);
-});
+}
+setupDropzone('backup-upload-zone', 'backup-file', processBackupFile);
 document.getElementById('btn-wipe').addEventListener('click', ()=>{
   confirmDialog('Esto borra TODOS los movimientos, ingresos y categorías personalizadas de esta computadora. No se puede deshacer.', ()=>{
     DATA = defaultData(); saveData(); renderView(currentView); toast('Todos los datos fueron borrados.');
@@ -1529,11 +2296,55 @@ document.getElementById('btn-wipe').addEventListener('click', ()=>{
 /* =========================================================
    INIT
 ========================================================= */
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('sw.js').catch(err=>console.warn('No se pudo registrar el service worker', err));
+}
+
+// Si venimos de "Compartir" un archivo desde otra app (ej. WhatsApp), el service worker
+// ya lo dejó guardado en IndexedDB. Lo levantamos y preguntamos si es de gastos o de ingresos.
+async function checkPendingShare(){
+  const params = new URLSearchParams(location.search);
+  if(params.get('shared') !== '1') return;
+  history.replaceState({}, '', location.pathname);
+  if(!dbHandle) return;
+  try{
+    const pending = await idbGet(dbHandle, 'pending-share');
+    if(pending && pending.bytes){
+      await idbSet(dbHandle, 'pending-share', null);
+      const file = new File([pending.bytes], pending.name || 'compartido.xlsx', {type: pending.type || ''});
+      askImportType(file);
+    }
+  }catch(e){
+    console.warn('No se pudo leer el archivo compartido', e);
+  }
+}
+function askImportType(file){
+  openModal(`
+    <div class="modal-head"><h2>Archivo recibido</h2><button class="modal-close" data-close>&times;</button></div>
+    <div class="modal-body">
+      <p style="margin-top:0;">Compartiste <strong>${escapeHtml(file.name)}</strong>. ¿Qué tipo de planilla es?</p>
+      <div style="display:flex;gap:10px;margin-top:14px;">
+        <button class="btn btn-primary" id="share-as-gastos" style="flex:1;">Gastos</button>
+        <button class="btn btn-primary" id="share-as-ingresos" style="flex:1;">Ingresos</button>
+      </div>
+    </div>
+    <div class="modal-foot"><button class="btn" data-close>Cancelar</button></div>
+  `);
+  document.getElementById('modal-root').querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click', closeModal));
+  document.getElementById('share-as-gastos').addEventListener('click', ()=>{
+    closeModal(); setView('movimientos'); processMovFile(file);
+  });
+  document.getElementById('share-as-ingresos').addEventListener('click', ()=>{
+    closeModal(); setView('ingresos'); processIngresoFile(file);
+  });
+}
+
 async function initApp(){
   DATA = await loadData();
   renderDashboard();
   const loading = document.getElementById('boot-loading');
   if(loading) loading.remove();
+  checkPendingShare();
 }
 initApp();
 
