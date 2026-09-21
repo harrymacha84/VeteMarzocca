@@ -20,7 +20,7 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
-  if (event.request.method === 'POST' && url.pathname.endsWith('/share-target.html')) {
+  if (event.request.method === 'POST' && url.pathname.endsWith('/index.html')) {
     event.respondWith(handleShareTarget(event.request, url));
   }
 });
