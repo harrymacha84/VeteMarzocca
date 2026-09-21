@@ -27,8 +27,11 @@ self.addEventListener('fetch', (event) => {
 
 async function handleShareTarget(request, url) {
   const debugInfo = {};
+  debugInfo.contentType = request.headers.get('content-type');
+  debugInfo.contentLength = request.headers.get('content-length');
   try {
-    const formData = await request.formData();
+    const clonedRequest = request.clone();
+    const formData = await clonedRequest.formData();
     debugInfo.keys = Array.from(formData.keys());
     let file = formData.get('sharedFile');
     if (!file || typeof file === 'string') {
