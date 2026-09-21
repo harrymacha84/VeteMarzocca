@@ -30,8 +30,19 @@ async function handleShareTarget(request, url) {
   debugInfo.contentType = request.headers.get('content-type');
   debugInfo.contentLength = request.headers.get('content-length');
   try {
-    const clonedRequest = request.clone();
-    const formData = await clonedRequest.formData();
+    // Dos clones independientes del mismo cuerpo sin leer todavía:
+    // uno para medir bytes crudos, otro para el parser de formulario.
+    const reqForBytes = request.clone();
+    const reqForForm = request.clone();
+
+    try {
+      const buf = await reqForBytes.arrayBuffer();
+      debugInfo.bodyByteLength = buf.byteLength;
+    } catch (e) {
+      debugInfo.bodyReadError = String((e && e.message) || e);
+    }
+
+    const formData = await reqForForm.formData();
     debugInfo.keys = Array.from(formData.keys());
     let file = formData.get('sharedFile');
     if (!file || typeof file === 'string') {
