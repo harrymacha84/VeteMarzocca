@@ -21,12 +21,14 @@
     "params": {
       "files": [
         {
-          "name": "sharedFile",
+          "name": "sharedfile",
           "accept": [
             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             "application/vnd.ms-excel",
+            "application/json",
             ".xlsx",
-            ".xls"
+            ".xls",
+            ".json"
           ]
         }
       ]

@@ -44,7 +44,7 @@ async function handleShareTarget(request, url) {
 
     const formData = await reqForForm.formData();
     debugInfo.keys = Array.from(formData.keys());
-    let file = formData.get('sharedFile');
+    let file = formData.get('sharedfile');
     if (!file || typeof file === 'string') {
       // Por si Android/WhatsApp no usó exactamente el nombre de campo declarado:
       // buscamos cualquier entrada que sea un archivo real.

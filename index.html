@@ -2345,6 +2345,21 @@ async function checkPendingShare(){
   }
 }
 function askImportType(file){
+  const isJson = /\.json$/i.test(file.name) || file.type === 'application/json';
+  if(isJson){
+    openModal(`
+      <div class="modal-head"><h2>Copia de seguridad recibida</h2><button class="modal-close" data-close>&times;</button></div>
+      <div class="modal-body">
+        <p style="margin-top:0;">Compartiste <strong>${escapeHtml(file.name)}</strong>, que parece una copia de seguridad de Marzocca. Esto va a reemplazar todos los datos actuales de esta computadora/teléfono por los del archivo. ¿Restaurar?</p>
+      </div>
+      <div class="modal-foot"><button class="btn" data-close>Cancelar</button><button class="btn btn-primary" id="share-as-backup">Restaurar copia</button></div>
+    `);
+    document.getElementById('modal-root').querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click', closeModal));
+    document.getElementById('share-as-backup').addEventListener('click', ()=>{
+      closeModal(); processBackupFile(file);
+    });
+    return;
+  }
   openModal(`
     <div class="modal-head"><h2>Archivo recibido</h2><button class="modal-close" data-close>&times;</button></div>
     <div class="modal-body">
